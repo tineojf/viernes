@@ -8,10 +8,15 @@ import Home from "./Routes/Home";
 import Contact from "./Routes/Contact";
 import Detail from "./Routes/Detail";
 import Favs from "./Routes/Favs";
+import { useContextGlobal } from "./Components/utils/useFunctions";
 
 function App() {
+  const { state } = useContextGlobal();
+  const background =
+    state.tema == "dark" ? { backgroundColor: "black", color: "white" } : {};
+
   return (
-    <div className="App">
+    <div className="App" data-bs-theme={state.tema} style={background}>
       <Navbar />
 
       <Routes>
