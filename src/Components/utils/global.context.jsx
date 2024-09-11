@@ -7,6 +7,7 @@ export const ContextProvider = (propiedades) => {
   const { children } = propiedades;
   //Aqui deberan implementar la logica propia del Context, utilizando el hook useMemo
 
+  // variables que guardare en el contexto
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (

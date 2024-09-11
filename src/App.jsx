@@ -17,7 +17,7 @@ function App() {
       <Routes>
         <Route path={rutas.home} element={<Home />} />
         <Route path={rutas.contact} element={<Contact />} />
-        <Route path={rutas.detail} element={<Detail />} />
+        <Route path={rutas.detail + ":id"} element={<Detail />} />
         <Route path={rutas.favs} element={<Favs />} />
         {/* agregar ruta notfoun */}
       </Routes>
