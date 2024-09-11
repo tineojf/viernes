@@ -10,7 +10,7 @@ export const reducer = (state, action) => {
       return {};
 
     case "Data":
-      return {};
+      return { ...state, data: action.payload };
 
     case "Favorito":
       return {};
